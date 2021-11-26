@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Json\Samurais.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="jflbszj4.byp~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Json\Samurais.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RavenDB.Client" Version="5.2.4" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.RavenDB" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SamuraiLegend.Application\SamuraiLegend.Application.csproj" />
+    <ProjectReference Include="..\SamuraiLegend.Infrastructure.Persistence\SamuraiLegend.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\SamuraiLegend.Infrastructure.Shared\SamuraiLegend.Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
